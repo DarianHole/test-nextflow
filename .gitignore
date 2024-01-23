@@ -1,0 +1,4 @@
+# Outputs from testing
+results/
+work/
+.nextflow*

@@ -8,11 +8,18 @@ nextflow.enable.dsl = 2
 NextflowInitialize.validateParams(workflow, params, log)
 
 // Modules
-include { wc_file_to_output; wc_file_to_stdout } from './modules/modules.nf'
+include {
+    zzzzzzzzzz; 
+    wc_file_to_output; 
+    wc_file_to_stdout;
+} from './modules/modules.nf'
 
 // Execute main workflow
 workflow {
     ch_input = Channel.fromPath( params.input )
+    if ( params.sleep ) {
+        zzzzzzzzzz(params.sleep)
+    }
     wc_file_to_output( ch_input )
     wc_file_to_stdout( ch_input ) | view
 }

@@ -9,6 +9,11 @@ class NextflowInitialize {
             System.exit(1)
         }
 
+        // Is this a good optional check, idk but it works
+        if ( params.sleep ) {
+            assert params.sleep instanceof Integer
+        }
+
         // Print Starting Niceness
         log.info """
 ╔════════════════════════╗

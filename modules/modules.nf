@@ -1,3 +1,15 @@
+process zzzzzzzzzz {
+
+    container 'clarinpl/wccldict:latest'
+
+    input:
+    val sleep
+
+    script:
+    """
+    sleep $sleep
+    """
+}
 process wc_file_to_output {
     publishDir "${params.outdir}/"
 
